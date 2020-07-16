@@ -1,0 +1,55 @@
+.extracurricular{
+  padding:50px 0;
+  .extra__container{
+    width:85%;
+    margin:0 auto;
+    @include bp(mobile){
+      flex-direction:column;
+      width:100%;
+    }
+  }
+  .extra__copy-container{
+    justify-content:center;
+    @include bp(mobile){
+      text-align:center;
+      width:85%;
+      margin:0 auto;
+      margin-bottom:25px;
+    }
+    .copy__inner-container{
+      width:75%;
+      @include bp(mobile){
+        width:100%;
+      }
+    }
+  }
+  .extra__activities{
+    .activities__inner-container{
+      text-align:center;
+      background-color: $white-light;
+      width:80%;
+      margin:0 auto;
+      padding:40px 50px;
+      @include bp(tablet){
+        width:100%;
+        padding:30px 40px;
+      }
+      .activities__title{
+        font-size:1.3rem;
+        margin-bottom:15px;
+      }
+      .activities__activity-container{
+        .single__activity{
+          font-size:.95rem;
+          margin:2px 0;
+        }
+      }
+    }
+    .separator{
+      background-color: $green;
+      width:100%;
+      height:1px;
+      margin:25px auto;
+    }
+  }
+}

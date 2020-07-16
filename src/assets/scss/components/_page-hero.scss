@@ -1,0 +1,37 @@
+.page-hero{
+	position:relative;
+  @include bp(mobile){
+    height:450px;
+  }
+  &.academics-hero{
+    @include bp(mobile){
+      height:550px;
+    }
+  }
+  &.student-life-hero{
+    @include bp(mobile){
+      height:550px;
+    }
+  }
+  .page-hero__content-container{
+    width:100%;
+    text-align:center;
+    @include position(absolute, 55%, null, null, 50%);
+    @include transform(-50%, -50%);
+    @include bp(desktop){
+      width:75%;
+    }
+    @include bp(mobile){
+      top:60%;
+    }
+    .page-hero__tagline{
+      margin-bottom:15px;
+    }
+    .page-hero__copy{
+      width:75%;
+      margin: 0 auto;
+      font-size:1.1rem;
+      font-weight:800;
+    }
+  }
+}

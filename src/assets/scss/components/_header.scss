@@ -1,0 +1,358 @@
+//Home Page header styles
+
+.home-hero-menu{
+  position:absolute;
+  width:100%;
+  z-index:1000;
+  .header-top{
+    position:relative;
+    background-color: $white-light;
+    max-width:1440px;
+    width:100%;
+    margin:0 auto;
+    align-content:center;
+    font-size:.85rem;
+    justify-content:space-between;
+    @include bp(mobile){
+      display:none;
+    }
+  }
+  .menu{
+    a{
+      color:$green;
+      transition:.4s;
+      @include bp(desktop){
+        &:hover{
+          color:$green-dark;
+        }
+      }
+    }
+  }
+  .hero-menu-container{
+    transition:.4s;
+    padding:15px 25px;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    @include bp(tablet-landscape){
+      // margin-bottom:100px;
+    }
+    @include bp(mobile){
+      padding:10px 25px;
+    }
+    .pc-logo-green{
+      display:none;
+    }
+    .pc-logo-white{
+      width:300px;
+      transition:.4s;
+      @include bp(tablet-landscape){
+        width:250px;
+      }
+      @include bp(tablet){
+        width:225px;
+      }
+      //logo was defaulting to green
+      path{
+        fill:$white;
+      }
+    }
+    .hero-menu{
+      @include bp(tablet){
+        display:none;
+      }
+      a{
+        font-size:.9rem;
+        color:$white;
+        padding:.7rem .8rem;
+        transition:.3s;
+        @include bp(desktop-small){
+          padding:.5rem .4rem;
+        }
+        @include bp(tablet-landscape){
+          font-size:.8rem;
+          padding:.5rem .3rem;
+        }
+      }
+      &.is-active{
+        a{
+          color:$green;
+        }
+      }
+    }
+    .mobile-menu-icon{
+      height: 60px;
+      display:none;
+      flex-direction:column;
+      justify-content:center;
+      cursor:pointer;
+      width: 75px;
+      align-items: flex-end;
+      @include bp(tablet){
+        display:flex;
+      }
+      .ham-container{
+        position:relative;
+        height:18px;
+        width:25px;
+        .ham-icon{
+          position:absolute;
+          width: 25px;
+          height: 3px;
+          background-color: $white;
+          left:0;
+          opacity:1;
+          transform:rotate(0deg);
+          transform-origin: left center;
+          transition:.4s ease-in-out;
+          &.bar-1{
+            top:0;
+          }
+          &.bar-2{
+            top:50%;
+          }
+          &.bar-3{
+            top:100%;
+          }
+        }
+      }
+    }
+  }
+  //menu styles when scrolled
+  .nav__inner{
+    width:100%;
+    position:relative;
+    &.is-stuck{
+      position:fixed;
+      .hero-menu-container{
+        padding:3px 25px;
+        background-color: $white;
+        a{
+          color:$medium-gray;
+        }
+      }
+      .ham-container{
+        .ham-icon{
+          background-color: $green;
+        }
+      }
+      .pc-logo-white{
+        display:none;
+      }
+      .pc-logo-green{
+        display: block;
+        width:250px;
+        padding:10px 0;
+        @include bp(tablet){
+          width:200px;
+        }
+      }
+    }
+  }
+}
+
+//Main page header styles --------->
+.hero-menu-sticky-container{
+  z-index:100;
+  position:absolute;
+  width:100%;
+}
+.sticky-menu-container{
+  &.is-stuck{
+    .hero-menu__white-container{
+      padding:0px 25px;
+    }
+    .pc-logo-green{
+      width:250px;
+      @include bp(tablet){
+        width:200px;
+      }
+    }
+  }
+}
+.header-top{
+  position:relative;
+  background-color: $white-light;
+  max-width:1440px;
+  width:100%;
+  margin:0 auto;
+  align-content:center;
+  font-size:.85rem;
+  justify-content:space-between;
+  @include bp(tablet){
+    display:none;
+  }
+  .separator{
+    &:last-child{
+      display:none;
+    }
+  }
+}
+.menu{
+  a{
+    color:$green;
+    transition:.4s;
+    @include bp(desktop){
+      &:hover{
+        color:$green-dark;
+      }
+    }
+  }
+}
+.hero-menu__white-container{
+  padding:5px 25px;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  background-color:$white;
+  transition:.4s;
+  .pc-logo-green{
+    width:300px;
+    transition:.4s;
+    padding:10px 0;
+    @include bp(tablet-landscape){
+      width:250px;
+    }
+    @include bp(tablet){
+      width:225px;
+    }
+  }
+  .hero-menu{
+    @include bp(tablet){
+      display:none;
+    }
+    li{
+      a{
+        font-size:.9rem;
+        color:$medium-gray;
+        padding:.7rem .8rem;
+        transition:.3s;
+        @include bp(desktop){
+          &:hover{
+            color:$green;
+          }
+        }
+        @include bp(desktop-small){
+          font-size:.8rem;
+          padding:.5rem .4rem;
+        }
+        @include bp(tablet-landscape){
+          font-size:.75rem;
+          padding:.5rem .3rem;
+        }
+      }
+      &.is-active{
+        a{
+          color:$green;
+        }
+      }
+    }
+  }
+}
+
+// Secondary page menu styles ---->
+.secondary-hero-menu{
+  .sticky-menu-container{
+    .header-top{
+      background-color: #fff;
+    }
+    .hero-menu__container{
+      padding:15px 25px;
+      align-items:center;
+      justify-content:space-between;
+      position:relative;
+      background-color:$white-light;
+      transition:.4s;
+    }
+    .pc-logo-green{
+      width:300px;
+      transition:.4s;
+      @include bp(tablet-landscape){
+        width:250px;
+      }
+      @include bp(tablet){
+        width:225px;
+      }
+    }
+    .hero-menu{
+      @include bp(tablet){
+        display:none;
+      }
+      li{
+        a{
+          font-size:.9rem;
+          color:$medium-gray;
+          padding:.7rem .8rem;
+          transition:.3s;
+          @include bp(desktop){
+            &:hover{
+              color:$green;
+            }
+          }
+          @include bp(desktop-small){
+            font-size:.8rem;
+            padding:.5rem .4rem;
+          }
+          @include bp(tablet-landscape){
+            font-size:.8rem;
+            padding:.5rem .3rem;
+          }
+        }
+        &.is-active{
+          a{
+            color:$green;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Menu -------------->
+.mobile-menu-icon{
+  height: 60px;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  @include bp(tablet){
+    display:flex;
+  }
+  .ham-container{
+    position:relative;
+    height:18px;
+    width:25px;
+    &.open{
+      .bar-1{
+        transform: rotate(45deg);
+      }
+      .bar-2{
+        width:0;
+        opacity:0;
+      }
+      .bar-3{
+        transform:rotate(-45deg);
+      }
+    }
+    .ham-icon{
+      position:absolute;
+      width: 25px;
+      height: 3px;
+      background-color: $green;
+      left:0;
+      opacity:1;
+      transform:rotate(0deg);
+      transform-origin: left center;
+      transition:.4s ease-in-out;
+      &.bar-1{
+        top:0;
+      }
+      &.bar-2{
+        top:50%;
+      }
+      &.bar-3{
+        top:100%;
+      }
+    }
+  }
+}

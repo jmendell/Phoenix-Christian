@@ -1,0 +1,31 @@
+.global-perspective{
+  position:relative;
+  svg{
+    width:75%;
+    max-width: 900px;
+    height:100%;
+    @include position(absolute, 50%, null, null, 50%);
+    @include transform(-50%, -50%);
+    z-index:1;
+    @include bp(mobile){
+      width:100%;
+    }
+  }
+  .global-perspective__copy-container{
+    position:relative;
+    z-index:2;
+    height:100%;
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    padding:200px 0;
+    @include bp(tablet){
+      padding:125px 0;
+    }
+    @include bp(mobile){
+      padding:0;
+      padding:50px 0;
+      width:90%;
+    }
+  }
+}

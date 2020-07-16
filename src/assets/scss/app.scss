@@ -1,0 +1,152 @@
+@charset 'utf-8';
+
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+//@include foundation-grid;
+//@include foundation-flex-grid;
+
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+//Custom Mixins
+@import "mixins/custom-mixins";
+@import "mixins/media-queries";
+
+// Global
+@import "global/accessibility";
+@import "global/wp-admin";
+@import "global/wp-overrides";
+@import "global/gutenberg";
+@import "global/typography";
+@import "global/layout";
+@import "global/global-styles";
+@import "global/error-404-styles";
+
+// Modules
+@import "modules/navigation";
+@import "modules/content";
+@import "modules/editor-style";
+
+// Components
+@import "components/buttons";
+@import "components/footer-mobile";
+@import "components/footer";
+@import "components/mobile-menu";
+@import "components/page-hero";
+@import "components/slider-styles";
+@import "components/take-the-next-step";
+@import "components/slick-carousel";
+@import "components/header";
+@import "components/calendar";
+@import "components/alumni-page-styles";
+@import "components/forms";
+@import "components/staff-faculty-directory";
+
+//Pages ---->
+
+//Home
+@import "pages/home/hero";
+@import "pages/home/college-prep";
+@import "pages/home/instagram-section";
+@import "pages/home/pc-info-text-and-cards";
+@import "pages/home/upcoming-events";
+@import "pages/home/bulleted-section";
+
+//About
+@import "pages/about/dual-slider";
+@import "pages/about/founded-in";
+@import "pages/about/leadership-staff";
+@import "pages/about/our-mission";
+@import "pages/about/students-inspire";
+
+//Academics
+@import "pages/academics/academics-grade-info";
+@import "pages/academics/dual-enrollment";
+@import "pages/academics/education-blocks";
+@import "pages/academics/unique-formula";
+
+//Student Life
+@import 'pages/student-life/extracurricular';
+@import 'pages/student-life/student-life-slider';
+@import 'pages/student-life/global-view';
+@import 'pages/student-life/athletics';
+
+//Admissions
+@import 'pages/admissions/admission-info-blocks';
+@import 'pages/admissions/process';
+@import 'pages/admissions/scholarships';
+@import 'pages/admissions/admissions-faq';
+
+//International
+@import 'pages/international/global-perspective';
+@import 'pages/international/international-alumni';
+@import 'pages/international/simple-process';
+@import 'pages/international/international-faq';
+@import 'pages/international/become-a-host';
+@import 'pages/international/take-a-look-full';
+
+//Reusable
+@import "pages/reusable/modal-styles";
+
+//Support
+@import 'pages/support/support-hero';
+@import 'pages/support/donation-types';
+@import 'pages/support/need-is-real';
+@import 'pages/support/letter-from-superintendent';
+@import 'pages/support/scholarship-support';
+@import 'pages/support/foster-care';
+@import 'pages/support/paws';
+@import 'pages/support/legacy';
+
+//Highlights
+@import 'pages/highlights/highlight-content';
+
+//Secondary Pages
+// @import "pages/secondary-pages/menu-white";
+@import "pages/secondary-pages/secondary-page-content";

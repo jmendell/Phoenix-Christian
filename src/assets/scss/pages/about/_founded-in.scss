@@ -1,0 +1,12 @@
+.founded-in{
+  padding:75px 0;
+  width:60%;
+  margin:0 auto;
+  text-align:center;
+  @include bp(tablet){
+  	width:75%;
+  }
+  @include bp(mobile){
+    width:85%;
+  }
+}

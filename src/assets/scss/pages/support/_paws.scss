@@ -1,0 +1,39 @@
+.paws{
+  padding:50px 0 100px;
+  background-color: $white-light;
+  .paws__outer-container{
+    width:85%;
+    margin:0 auto;
+    @include bp(tablet){
+      width:90%;
+    }
+    @include bp(mobile){
+      flex-direction: column;
+    }
+  }
+  .paws__image-container{
+    @include bp(mobile){
+      margin-bottom: 25px;
+    }
+  }
+  .paws__copy-container{
+    justify-content:center;
+    .paws-copy__inner-container{
+      width:75%;
+      @include bp(tablet){
+        width: 90%;
+      }
+      @include bp(mobile){
+        width:100%;
+      }
+    }
+    .paws__copy{
+      margin-bottom:50px;
+    }
+    .paws__btn-container{
+      @include bp(mobile){
+        text-align: center;
+      }
+    }
+  }
+}

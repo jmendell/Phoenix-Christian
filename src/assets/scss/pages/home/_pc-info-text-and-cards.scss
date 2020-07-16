@@ -1,0 +1,108 @@
+.pc-info-text-and-cards{
+  padding:75px 0;
+  position:relative;
+  @include bp(tablet){
+    padding-top:50px;
+  }
+  @include bp(mobile){
+    padding:0 0 25px 0;
+  }
+  .bg-icon{ //Big icon on the background of this section
+    position: absolute;
+    width: 60%;
+    right: -30px;
+    top: -22%;
+    z-index:1;
+    max-width:750px;
+    @include bp(tablet){
+      top:-15%;
+      width:70%;
+    }
+    @include bp(mobile){
+      display:none;
+    }
+  }
+  .grade-info-cards{
+    position:relative;
+    z-index:2;
+    margin-bottom:125px;
+    @include bp(mobile){
+      flex-direction:column;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom:50px;
+    }
+    .grade-info-card{
+      flex:1;
+      flex-basis:25%;
+      margin:0 10px;
+      position:relative;
+      @include bp(mobile){
+        margin:10px 0;
+      }
+      .image-container{
+        height: 325px;
+        background-size: cover;
+        background-position: center;
+      }
+      .info-card__image{
+        @include bp(mobile){
+          display:none;
+        }
+      }
+      .card-section{
+        background-color: $green;
+        position:absolute;
+        bottom:0;
+        width:100%;
+        @include bp(mobile){
+          padding:1.5rem;
+        }
+        .card-title{
+          font-size:1.1rem;
+          text-align:center;
+          color:$white;
+        }
+        .hidden-content{
+          display:none;
+          font-size:.9rem;
+          text-align:center;
+          margin-top:10px;
+          @include bp(mobile){
+            display:block;
+            font-size:1rem;
+          }
+          .hidden__copy{
+            margin-bottom:10px;
+            color:$white;
+          }
+        }
+      }
+    }
+  }
+//Section currently labeled as 'Growing up at Phoenix Christian'
+  .growing-up-pc{
+    position:relative;
+    z-index:2;
+    .growing-up__title{
+      text-align:center;
+      @include bp(mobile){
+        line-height:1.2;
+        width:90%;
+      }
+    }
+    .growing-up__copy{
+      width:50%;
+      text-align:center;
+      margin-bottom:25px;
+      font-size:1.1rem;
+      @include bp(desktop){
+        width:45%;
+      }
+      @include bp(mobile){
+        width:80%;
+        font-size:1.2rem;
+      }
+    }
+  }
+}

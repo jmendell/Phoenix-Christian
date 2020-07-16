@@ -1,0 +1,28 @@
+.unique-formula{
+  text-align: center;
+  position:relative;
+  padding:200px 0 50px;
+  @include bp(mobile){
+    padding:100px 0 25px;
+  }
+  .logo-green-circle{
+    width:20%;
+    @include position(absolute, 0%, null, null, 50%);
+    @include transform(-50%, -50%);
+    @include bp(mobile){
+      width:35%;
+    }
+  }
+  .unique-formula__title{
+    @include bp(mobile){
+      margin:0 10px 15px;
+    }
+  }
+  .unique-formula__copy{
+    width:60%;
+    margin:0 auto;
+    @include bp(mobile){
+      width:75%;
+    }
+  }
+}

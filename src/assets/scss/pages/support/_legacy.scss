@@ -1,0 +1,12 @@
+.legacy{
+  width:60%;
+  margin:0 auto;
+  text-align:center;
+  padding:100px 0;
+  @include bp(mobile){
+  	width:75%;
+  }
+  .legacy__copy{
+    margin-bottom:50px;
+  }
+}

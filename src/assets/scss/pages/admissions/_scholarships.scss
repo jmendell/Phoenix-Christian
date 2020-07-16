@@ -1,0 +1,119 @@
+.scholarships{
+  background-color: $white-light;
+  padding:50px 0;
+  .scholarship-container{
+    text-align:center;
+    width:75%;
+    margin:0 auto;
+  }
+  .scholarship__title{ //page 'global' scholarship title styles
+    margin-bottom:15px;
+    @include bp(mobile){
+      font-size:1.5rem;
+    }
+  }
+  .scholarship__copy{ //page 'global' scholarship copy styles
+    width:40%;
+    margin:0 auto;
+    @include bp(tablet){
+      width:60%;
+    }
+    @include bp(mobile){
+      width:90%;
+    }
+  }
+  .scholarships__tax-credit{
+    .tax-credit__copy{
+      width:60%;
+      margin:0 auto;
+      @include bp(mobile){
+        width:100%;
+      }
+    }
+  }
+  .separator{
+    height:1px;
+    width:85%;
+    margin: 50px auto;
+    background-color: $black;
+  }
+  .scholarship__individual{
+    margin-bottom:75px;
+  }
+  .scholarship__overflow-plus{
+    @include bp(mobile){
+      width:90%;
+    }
+    .overflow-plus__copy{
+      margin:0 auto 50px;
+    }
+    .overflow-plus__bullets{
+      flex-wrap:wrap;
+      margin-bottom:75px;
+      @include bp(mobile){
+        flex-direction:column;
+      }
+      .bullet__single-container{
+        flex-basis:50%;
+        margin-bottom: 25px;
+        justify-content: center;
+        .check-mark{
+          height:25px;
+          min-width:25px;
+          margin-right:10px;
+        }
+        .bullet__copy{
+          width:75%;
+          text-align:left;
+        }
+      }
+    }
+  }
+  .scholarship__corporate{
+    margin-bottom:50px;
+  }
+  .scholarship__applications{
+    width:65%;
+    margin:0 auto;
+    @include bp(tablet){
+      width:85%;
+    }
+    .scholarship-applications__title{
+      text-align:center;
+      margin-bottom: 25px;
+    }
+    .application-container-text{
+      margin-bottom:10px;
+    }
+    .application__single-container{
+      margin:10px 0;
+      @include bp(mobile){
+        flex-direction: column;
+      }
+      .application__scholarship-title{
+        width:100%;
+        border:1px solid $green;
+        padding:15px 10px;
+        font-size: 1.1rem;
+        @include bp(mobile){
+          font-size:1rem;
+        }
+      }
+      .apply__btn{
+        line-height:1.5;
+        background-color: $green;
+        padding:0 50px;
+        transition:.4s;
+        font-size:.9rem;
+        @include bp(desktop){
+          &:hover{
+            background-color: $green-dark-light;
+          }
+        }
+        @include bp(mobile){
+          padding:10px 0;
+        }
+      }
+    }
+  }
+}

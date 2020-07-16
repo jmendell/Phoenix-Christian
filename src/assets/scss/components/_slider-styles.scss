@@ -1,0 +1,36 @@
+.slider-button{
+  @include position(absolute, 50%, null, null, null);
+  @include transform(0, -50%);
+  @include size(40px, 40px);
+  border-radius:100%;
+  cursor:pointer;
+  z-index:10;
+  transition:.4s;
+  &.next{
+    right:15px;
+  }
+  &.prev{
+    left:15px;
+  }
+  .button-inner{
+    @include size(100%, 100%);
+    position:relative;
+    .slide-arrow{
+      @include position(absolute, 35%, null, null, null);
+      @include transform(-50%, -50%);
+      height: 12px;
+      width: 12px;
+      border-bottom: 2px solid $green-dark;
+      border-right: 2px solid $green-dark;
+      transition:.4s;
+      &.next{
+        transform: rotate(-45deg);
+        right:40%;
+      }
+      &.prev{
+        transform: rotate(135deg);
+        left:40%;
+      }
+    }
+  }
+}

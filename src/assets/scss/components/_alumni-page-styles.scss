@@ -1,0 +1,279 @@
+//Global Styles fort Alumni related pages
+.page-template-alumni-registration, .page-template-edit-alumni-profile{ 
+  background-color: $white;
+  .secondary-page__alumni-container{
+    width:100%;
+  }
+  .form-container{
+    // width:90%;
+    // @include bp(desktop){
+    //   width:70%;
+    // }
+    .form-section-title-container{
+      margin:10px 0 5px;
+    }
+    .edit-alumni__section-title{
+      margin:0;
+      margin-bottom:25px;
+      font-family: 'brandon_textbold';
+      color:$medium-gray;
+    }
+    .alumni-form-textarea{
+      height:100px;
+      background-color:#f9f9f9;
+      &:focus{
+        box-shadow:0 0 2px #9C9EA0;
+      }
+      &.filled{
+        border:2px solid $green;
+      }
+    }
+    .reg-form-field__submit{
+      text-align:center;
+      cursor:pointer;
+    }
+  .pikaday__container{
+      margin:0; //For a date-selector form element styling
+    }
+  }
+  footer{
+    display:none;
+  }
+  // .nf-cell{ //Align form content to the left, flush with other content on page
+  //   padding:0;
+  // }
+}
+
+//Alumni Registration Styles ------------>
+.page-template-alumni-registration{
+  .alumni-registration__title-container{
+    margin-bottom:25px;
+  }
+}
+
+//Edit alumni profile --------------------------->
+.page-template-edit-alumni-profile{
+  nf-fields-wrap {
+    nf-field{
+      flex-basis:31%;
+      margin:0 5px;
+      &:nth-child(16){ //textarea on it's own line at full width
+        flex-basis:95%;
+      }
+    }
+  }
+}
+
+//Alumni Login page ------------------------>
+.page-template-alumni-login{
+  input[type="text"], input[type="password"]{
+    width:50%;
+    @include bp(tablet){
+      width:75%;
+    }
+    @include bp(mobile){
+      width:90%;
+    }
+  }
+}
+
+//Alumni Directory styles ------------------------------>
+.page-template-alumni-directory{
+  .secondary__content-container__alumni-directory{
+    padding:25px;
+    background-color: $white;
+    width:90%;
+    @include bp(tablet){
+      flex-basis:100%;
+    }
+    h1, h2, h3, h4{
+      color:#66992C;
+      font-family: 'brandon_text_regularregular';
+      margin-bottom:15px;
+    }
+    .alumni-directory__form-container{
+      align-items:center;
+      @include bp(tablet){
+        flex-direction:column;
+        justify-content:center;
+      }
+      .alumni-directory__refresh{
+        padding: 5px 25px;
+        margin-right:40px;
+        margin:15px 25px;
+      }
+      .display-selected-class-year{
+        display: flex;
+        align-items: center;
+      }
+      .grad-year-displayed{
+        font-size:1.5rem;
+        margin-left:10px;
+      }
+    }
+    #alumni-select{
+      padding-left: 15px;
+      display:flex;
+      @include bp(tablet){
+        justify-content:center;
+        margin:0;
+        padding:0;
+      }
+      @include bp(mobile){
+        padding:0;
+      }
+      .grad-year-select_js, .select2-container{ //Had to force width onto the Select2 container
+        // @include bp(tablet){
+        //   width:75% !important;
+        // }
+        // @include bp(mobile){
+        //   width:95% !important;
+        // }
+      }
+      .submit_grad_year{
+        display:none;
+      }
+      //Select dropdown styles
+      .select2-selection--single{
+        border-radius:0;
+        border:none;
+        background:$light-gray;
+        .select2-selection__placeholder{
+          color:$black;
+        }
+      }
+      .select2-selection__arrow{
+        b{
+          border-color:$green transparent transparent transparent;
+        }
+      }
+    }
+  }
+  .single-alumni__information-container{
+    @include bp(desktop){
+      display:flex;
+      flex-wrap:wrap;
+    }
+  }
+  .single-alumni__container{
+    border:1px solid $green;
+    margin:15px;
+    padding:10px;
+    font-family: 'brandon_text_regularregular';
+    flex-basis:45%;
+    .alumni-dir__name{
+      font-size:2rem;
+      color:$green;
+      margin: 10px 0;
+    }
+    p{
+      margin:5px 0;
+    }
+    a{
+      transition:.3s;
+      @include bp(desktop){
+        &:hover{
+          color:$green-dark;
+        }
+      }
+    }
+    .alumni-dir__email{
+      margin-bottom: 5px;
+    }
+    .alumni-dir__spouse{
+      margin-bottom:15px;
+    }
+    .spouse-word{
+      display:block;
+      padding-bottom: 2px;
+    }
+    .grad-year{
+      color:$medium-gray;
+      font-family: 'brandon_textbold';
+    }
+    // .alumni-dir__bio-container{
+    //   margin-top:10px;
+    //   .alumni-dir__biography{
+    //     width:75%;
+    //   }
+    // }
+  }
+}
+
+//Alumni Log In styles --------------------------->
+.page-template-alumni-login{
+  .secondary-page__content-header__alumni{
+    margin-bottom:0;
+  }
+  .alumni-login-form{
+    .elementor-form-fields-wrapper{
+      @include bp(desktop){
+        width:50%;
+      }
+    }
+  }
+  .wp_login_error{
+    p{
+      color:red;
+    }
+  }
+}
+
+// General styles taken from the Secondary Page stylesheet. Changed to fit alumni page
+.alumni-page-content{
+  display:flex;
+  .secondary__side-menu{
+    flex-basis:25%;
+    background-color: #C5C5C5;
+    display:flex;
+    flex-direction:column;
+    padding:25px 0;
+    min-height: 100vh;
+    @include bp(tablet){
+      display:none;
+    }
+    ul{
+      li{
+        padding:10px 25px;
+        &.sub-menu__item{
+          padding:5px 0;
+        }
+        a{
+          color:#000;
+          text-transform:uppercase;
+        }
+      }
+      .menu__link{
+        font-family: 'brandon_textbold';
+        font-size:.9rem;
+      }
+      .sub-menu__link{
+        font-family: 'brandon_textmedium';
+        font-size:.8rem;
+      }
+    }
+  }
+  .alumni__content-container{
+    flex-basis:75%;
+    padding:25px;
+    background-color: $white;
+    @include bp(tablet){
+      flex-basis:100%;
+    }
+    h1, h2, h3, h4{
+      color:#66992C;
+      font-family: 'brandon_text_regularregular';
+      margin-bottom:15px;
+    }
+   //navigation for the sub-pages within these secondary pages - mobile
+    .alumni__content-header{
+      margin:15px 0 25px 0;
+    }
+    .alumni__copy-container{
+      font-family: 'brandon_text_regularregular';
+      a{
+        font-family: 'brandon_textbold';
+      }
+    }
+  }
+}

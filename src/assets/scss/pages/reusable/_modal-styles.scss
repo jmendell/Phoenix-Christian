@@ -1,0 +1,130 @@
+.video__modal{
+  display:none;
+  z-index:10;
+  @include size(100%,100%);
+  @include position(fixed, 50%, null, null, 50%);
+  @include transform(-50%, -50%);
+  .escape{
+    position:absolute;
+    right:15px;
+    top:15px;
+    cursor:pointer;
+    z-index:10;
+    @include size(25px,25px);
+    @include bp(tablet){
+      right:15px;
+      top:15px;
+    }
+    &:before, &:after{
+      content:'';
+      display:block;
+      position:absolute;
+      background:$white;
+      height:3px;
+      width:100%;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    &:before{
+      transform:rotate(45deg);
+    }
+    &:after{
+      transform:rotate(-45deg);
+    }
+  }
+  .modal-overlay{
+    background:rgba(0,0,0,.5);
+    @include size(100%,100%);
+    @include position(absolute, 0, null, null, 0);
+  }
+  .modal-inner{
+    padding:50px 0;
+    border-radius:10px;
+    background:$green;
+    @include position(absolute, 50%, null, null, 50%);
+    @include transform(-50%, -50%);
+    @include bp(mobile){
+      width:90%;
+    }
+    .modal_container{
+      width:85%;
+      margin:0 auto;
+      text-align:center;
+      iframe{
+        width: 800px;
+        height: 385px;
+        @include bp(tablet-landscape){
+          width: 600px;
+          height: 285px;
+        }
+        @include bp(mobile){
+          width: 600px;
+          height: 190px;
+        }
+      }
+    }
+  }
+}
+
+// covid banner
+.covid-banner{
+  height:75px;
+  width:100%;
+  background-color: #BF3308;
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index:100;
+
+  &.hide-banner{
+    display: none;
+  }
+
+  .banner-inner{
+    position:relative;
+    height:100%;
+    width:100%;
+  }
+
+  a{
+    color:$white;
+    width:50%;
+    height:100%;
+    margin:0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    .covid-message{
+      font-size:24px;
+    }
+  }
+
+  .banner-escape{
+    position:absolute;
+    right:15px;
+    top:15px;
+    cursor:pointer;
+    z-index:10;
+    @include size(25px,25px);
+    @include bp(tablet){
+      right:15px;
+      top:15px;
+    }
+    &:before, &:after{
+      content:'';
+      display:block;
+      position:absolute;
+      background:$white;
+      height:3px;
+      width:100%;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    &:before{
+      transform:rotate(45deg);
+    }
+    &:after{
+      transform:rotate(-45deg);
+    }
+  }
+}

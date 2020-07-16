@@ -1,0 +1,37 @@
+.become-a-host{
+  padding:75px 0;
+  .host__container{
+    width:85%;
+    margin:0 auto;
+    @include bp(tablet){
+      width:90%;
+    }
+    @include bp(mobile){
+      flex-direction: column;
+      width:100%;
+    }
+  }
+  .host__copy-container{
+    justify-content:center;
+    padding-left:100px;
+    @include bp(tablet){
+      padding-left:50px;
+    }
+    @include bp(tablet){
+      padding:0;
+      margin:50px 25px;
+    }
+    .copy__inner-container{
+      width:75%;
+      @include bp(tablet){
+        width:100%;
+      }
+      .host__copy{
+        margin-bottom: 35px;
+      }
+    }
+    .apply-btn{
+      padding:15px 50px;
+    }
+  }
+}

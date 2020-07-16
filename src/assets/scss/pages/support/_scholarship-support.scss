@@ -1,0 +1,55 @@
+.scholarship-support{
+  padding:75px 0;
+  .scholarship__copy-container{
+    text-align: center;
+    margin-bottom:50px;
+    .scholarship__copy{
+      width:60%;
+      margin:0 auto;
+      @include bp(mobile){
+        width:75%;
+      }
+    }
+  }
+  .scholaship-list__container{
+    margin:0 auto;
+    width:65%;
+    @include bp(tablet){
+      width:75%;
+    }
+    .single-scholarship{
+      align-items: center;
+      margin:10px 0;
+      @include bp(mobile){
+        flex-direction: column;
+      }
+      .scholarship__title{
+        width: 90%;
+        border: 1px solid #66992C;
+        padding: 15px 10px;
+        font-size: 1.1rem;
+        margin-right:25px;
+        @include bp(mobile){
+          margin:0;
+          width:100%;
+          font-size:1rem;
+        }
+      }
+      .donate__btn{
+        transition:.4s;
+        @include bp(desktop){
+          &:hover{
+            color:$green-dark;
+          }
+        }
+        @include bp(mobile){
+          width:100%;
+          background-color: $green;
+          color:$white;
+          text-align:center;
+          padding:10px 0;
+        }
+      }
+    }
+  }
+}

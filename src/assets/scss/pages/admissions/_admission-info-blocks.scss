@@ -1,0 +1,60 @@
+.admission-info-blocks{
+  height:400px;
+  @include bp(mobile){
+    height:100%;
+  }
+  .admission-blocks__container{
+    width:90%;
+    margin:0 auto;
+    position:relative;
+    top:-15%;
+    @include bp(tablet){
+      width:95%;
+    }
+    @include bp(mobile){
+      top:0;
+      flex-direction:column;
+      margin:15px auto;
+    }
+  }
+  .single-block{
+    background-color: $white-light;
+    margin:0 15px;
+    padding:75px 25px;
+    @include bp(tablet-landscape){
+      margin:0 10px;
+      padding:50px 25px;
+    }
+    @include bp(tablet){
+      padding:25px;
+    }
+    @include bp(mobile){
+      margin:10px;
+    }
+    svg{
+      width:80px;
+      height:100%;
+      @include bp(tablet){
+        width:40%;
+      }
+    }
+    .block__copy-container{
+      text-align:center;
+      margin:50px 0 30px;
+      .block__title{
+        margin-bottom:15px;
+        font-size:1.25rem;
+      }
+      .block__copy{
+        width:90%;
+        margin:15px auto;
+      }
+    }
+    .learn-more__container{
+      .learn-more__link-text{
+        font-size:.85rem;
+        margin-right:5px;
+      }
+    }
+  }
+}

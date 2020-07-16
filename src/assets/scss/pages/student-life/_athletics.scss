@@ -1,0 +1,83 @@
+.athletics{
+  background-color:$black;
+  position:relative;
+  padding:150px 0 0;
+  @include bp(mobile){
+    padding-top:75px;
+  }
+  .cougar-logo{
+    width:35%;
+    @include position(absolute, -3px, null, null, 50%);
+    @include transform(-50%, -50%);
+    @include bp(mobile){
+      width:50%;
+    }
+  }
+  .athletics__inner-container{
+    width:85%;
+    margin:0 auto;
+    padding-bottom:50px;
+    @include bp(tablet){
+      width:90%;
+    }
+    @include bp(mobile){
+      flex-direction:column;
+    }
+    .athletics__copy-container{
+      @include bp(mobile){
+        text-align:center;
+        margin-bottom:50px;
+      }
+      .athletics-copy__copy{
+        margin:25px 0 45px;
+        width:75%;
+        @include bp(tablet){
+          width:90%;
+          width: 100%;
+        }
+      }
+    }
+    .athletics__sports-container{
+      @include bp(mobile){
+        text-align:center;
+      }
+      .sports-outer-container{
+        @include bp(mobile){
+          flex-direction:column;
+        }
+      }
+      .sports-inner-container{
+        margin:10px;
+        .sports__title{
+          font-size:1.2rem;
+          margin-left:5px;
+        }
+        .sport{
+          margin:5px 0;
+        }
+      }
+      .separator{
+        background-color: $white;
+        width:200px;
+        height:2px;
+        margin:10px 0;
+        @include bp(mobile){
+          margin:10px auto;
+        }
+      }
+    }
+  }
+  .athletics__callout-container{
+    text-align:center;
+    background-color: #343434;
+    padding:25px 0;
+    .athletics__callout{
+      color:$medium-gray;
+      font-size:1.75rem;
+      @include bp(mobile){
+        width: 75%;
+        margin: 0 auto;
+      } 
+    }
+  }
+}

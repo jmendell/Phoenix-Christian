@@ -1,0 +1,61 @@
+.foster-care{
+  background-color: $white-light;
+  padding:100px 0 50px;
+  .foster__outer-container{
+    width:85%;
+    margin:0 auto;
+    align-items:center;
+    @include bp(tablet){
+      width:90%;
+    }
+    @include bp(mobile){
+      flex-direction:column;
+    }
+    .foster__image-contaienr{
+      @include bp(mobile){
+        margin-bottom: 25px;
+      }
+    }
+    .foster__info-container{
+      padding-left:75px;
+      @include bp(tablet){
+        padding-left:25px;
+      }
+      @include bp(mobile){
+        padding-left:0;
+      }
+      .foster__copy-container{
+        width:75%;
+        margin-bottom:25px;
+        @include bp(tablet){
+          width:90%;
+        }
+        @include bp(mobile){
+          width:100%;
+        }
+      }
+      .foster-link__single{
+        align-items:center;
+        margin:15px 0;
+        .foster__link{
+          margin-right:5px;
+          transition:.4s;
+          font-size:.9rem;
+        }
+        .view-arrow{
+          transition:.4s;
+        }
+        @include bp(desktop){
+          &:hover{
+            .foster__link{
+              color:$green-dark;
+            }
+            .view-arrow{
+              border-color: $green-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}

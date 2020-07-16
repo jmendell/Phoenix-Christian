@@ -1,0 +1,29 @@
+.pc-calendar{
+  background-color: $white;
+}
+
+.calendar-section{
+  position:relative;
+  min-height:1600px;
+  height:auto;
+  height:100%;
+  width:90%;
+  margin:0 auto;
+  padding:50px;
+  @include bp(desktop){
+    padding:50px 0;
+  }
+}
+
+#tandem_calendar{
+  min-height:100%;
+  height:1200px;
+  width: 100%; 
+  font-family: 'brandon_text_regularregular'; 
+  color: #000; 
+  clear: both;
+  border:none;
+  background-color: #fff;
+  @include position(absolute, 50%, null, null, 50%);
+  @include transform(-50%, -50%);
+}

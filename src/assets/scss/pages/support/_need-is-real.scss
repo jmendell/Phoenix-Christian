@@ -1,0 +1,49 @@
+.need-is-real{
+  text-align:center;
+  padding:25px 0 100px;
+  .need__copy{
+    width:60%;
+    margin:0 auto;
+    @include bp(mobile){
+      width:75%;
+    }
+  }
+  .dollar-amount__container{
+    margin:55px 0 75px;
+    @include bp(mobile){
+      flex-direction:column;
+    }
+    .single-amount__container{
+      padding:0 10px;
+      .dollar-amount{
+        display:flex;
+        margin-bottom: 15px;
+        @include bp(mobile){
+          font-size:4rem;
+        }
+        span{
+          font-size:1.5rem;
+        }
+        .small-m{
+          align-self:flex-end;
+        }
+      }
+      .dollar-amount__copy{
+        @include bp(desktop){
+          width:75%;
+          margin:0 auto;
+        }
+      }
+    }
+    .separator{
+      height:150px;
+      width:2px;
+      background-color: $light-gray;
+      @include bp(mobile){
+        width:50%;
+        height:2px;
+        margin:50px auto;
+      }
+    }
+  }
+}

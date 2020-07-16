@@ -1,0 +1,49 @@
+.international-alumni{
+  padding-bottom:50px;
+  .alumni__inner-container{
+    border-top:2px solid $light-gray;
+    border-bottom:2px solid $light-gray;
+    width:75%;
+    margin:0 auto;
+    align-items:center;
+    @include bp(tablet){
+      width:90%;
+    }
+    .alumni__single-container{
+      width:80%;
+      margin:50px auto;
+      @include bp(tablet){
+        width:100%;
+      }
+      @include bp(mobile){
+        flex-direction:column;
+        align-items:center;
+        margin: 25px auto;
+      }
+      .alimni__image{
+        width:450px;
+        height:100%;
+        border-radius:100%;
+        margin-right:25px;
+        @include bp(mobile){
+          width:50%;
+        }
+      }
+      .alumni__copy-container{
+        justify-content: center;
+        @include bp(mobile){
+          text-align: center;
+        }
+        .alumni__copy{
+          margin-bottom: 15px;
+          @include bp(mobile){
+            margin:25px 0;
+          }
+        }
+        .alumni__name{
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

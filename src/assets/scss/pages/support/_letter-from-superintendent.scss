@@ -1,0 +1,28 @@
+.letter-from-superintendent{
+  background-color: $white-light;
+  padding:75px 0;
+  .letter__inner-container{
+    margin:0 auto;
+    @include bp(desktop){
+      width:50%;
+    }
+    @include bp(tablet){
+      width:75%;
+    }
+    .letter__section-title{
+      text-align:center;
+      margin-bottom: 50px;
+    }
+    .author-image-container{
+      margin:25px 0;
+      height: 125px;
+      width: 125px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 100px;
+    }
+    .letter-copy__details{
+      margin-bottom:10px;
+    }
+  }
+}

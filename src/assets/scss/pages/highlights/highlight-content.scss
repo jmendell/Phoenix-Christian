@@ -1,0 +1,71 @@
+//Highlight page content
+.highlights-page-container{
+  padding-top:150px;
+  width:90%;
+  margin:0 auto;
+}
+.highlights-section-title{
+  margin:25px 0;
+}
+.highlight-content{
+  height:100%;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding-bottom:50px;
+  a{
+    flex-basis:47%;
+    @include bp(tablet){
+      flex-basis:100%;
+    }
+  }
+  .single-highlight__container{
+    position:relative;
+    margin:25px;
+    display:flex;
+    .highlight-image__container{
+      position:relative;
+      height:300px;
+      width:100%;
+      background-size:cover;
+      background-position:center;
+      background-repeat: no-repeat;
+    }
+    .highlight__title-container{
+      background-color: $white-light;
+      height:100%;
+      align-items:center;
+    }
+    .highlight__post-title{
+      color:$green;
+      font-size:1.2rem;
+      padding:15px;
+    }
+  }
+}
+
+//single highlight (post) styles
+.single-highlight{
+  padding-top:175px;
+  .highlight__content-container{
+    width:75%;
+    margin:0 auto;
+    .highlight__title{
+      color:$green;
+    }
+    .highlight__content-section{
+      margin:25px 0;
+      p{
+        margin:15px 0;
+      }
+      img{
+        margin:25px 0;
+      }
+    }
+  }
+}
+
+.single-post{
+  footer{
+    display:none;
+  }
+}

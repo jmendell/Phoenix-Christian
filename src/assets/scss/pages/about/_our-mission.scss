@@ -1,0 +1,26 @@
+.our-mission{
+  padding-bottom:75px;
+  @include bp(mobile){
+    flex-direction: column;
+  }
+  .our-mission__copy-container{
+    flex-basis:45%;
+    @include bp(mobile){
+      text-align: center;
+      margin-bottom:35px;
+    }
+  }
+  .our-mission-copy__inner-container{
+    width: 75%;
+    margin:0 auto;
+    @include bp(mobile){
+      width:85%;
+    }
+    .our-mission__copy{
+      margin-bottom:35px;
+    }
+  }
+  .our-mission__image-container{
+    flex-basis:55%;
+  }
+}

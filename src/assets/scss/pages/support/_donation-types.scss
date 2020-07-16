@@ -1,0 +1,93 @@
+.donation-types{
+  padding:75px 0;
+  @include bp(mobile){
+    padding:50px 0;
+  }
+  .content-container{
+    @include bp(tablet){
+      width:95%;
+    }
+    @include bp(mobile){
+      flex-direction: column;
+      width:100%;
+    }
+  }
+  .donation-list__container{
+    position:relative;
+    text-align:center;
+    background-color: $white-light;
+    margin:0 25px;
+    padding:25px 0 75px;
+    @include bp(tablet){
+      margin:0 10px;
+    }
+    @include bp(mobile){
+      margin:0;
+    }
+    &.start-small__container{
+      @include bp(mobile){
+        margin-bottom: 50px;
+      }
+    }
+    .donation-container__title{
+      margin-bottom: 5px;
+    }
+    .donation-container__subtitle{
+      font-size:.95rem;
+    }
+    .separator{
+      width:40%;
+      height:2px;
+      margin:25px auto;
+      background-color: $green;
+      @include bp(mobile){
+        width:150px;
+      }
+    }
+    .donation-mobile__down-arrow-container{
+      @include bp(desktop){
+        display:none;
+      }
+      @include bp(tablet){
+        display:none;
+      }
+      @include bp(mobile){
+        display: flex;
+      }
+      border:2px solid $green;  
+      border-radius:25px;
+      position: relative;
+      @include size(35px,35px);
+      align-items: center;
+      justify-content: center;
+      .donation-mobile__down-arrow{
+        @include size(12px,12px);
+        border-bottom:2px solid $green;
+        border-right:2px solid $green;
+        transform:rotate(45deg);
+        position:relative;
+        top:-3px;
+        transition:.4s;
+        &.flipped{
+          transform:rotate(-135deg);
+          top:2px;
+        }
+      }
+    }
+    .donation__list{
+      flex-direction:column;
+      @include bp(mobile){
+        display:none;
+      }
+      li{
+        margin:10px 0;
+      }
+    }
+  }
+  .donation-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

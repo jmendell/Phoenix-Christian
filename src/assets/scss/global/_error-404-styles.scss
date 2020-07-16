@@ -1,0 +1,22 @@
+.error404{
+  .error-404-container{
+    padding: 200px 0;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .error-404-copy{
+      margin:10px 0;
+    }
+  }
+  .header{
+    display:none;
+  }
+  .open-matts{
+    display:none;
+  }
+  footer{
+    bottom:0;
+    width:100%;
+  }
+}

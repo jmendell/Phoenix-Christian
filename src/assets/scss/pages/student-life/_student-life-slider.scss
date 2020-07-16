@@ -1,0 +1,85 @@
+.student-life-slider{ 
+  position:relative;
+  padding-bottom:50px;
+  @include bp(mobile){
+    padding-bottom:0;
+  }
+  .student-life__slide-inner-container{
+    height:100%;
+    margin-bottom:15px;
+    @include bp(mobile){
+      margin-bottom: 0;
+    }
+    .slick-list{//must match height of image. There was white space at bottom
+      height:500px;
+      @include bp(tablet){
+        height:400px;
+      }
+      @include bp(mobile){
+        height:250px;
+      }
+    }
+    .slide__image{
+      background-size:cover;
+      background-position:center;
+      height: 500px;
+      @include bp(tablet){
+        height:400px;
+      }
+      @include bp(mobile){
+        height:250px;
+      }
+    }
+  }
+  .student-life__retreats{
+    width: 25%;
+    background-color: $green;
+    position:absolute;
+    bottom:-15%;
+    left:10%;
+    z-index:2;
+    @include bp(tablet){
+      width:40%;
+      left:5%;
+    }
+    @include bp(mobile){
+      position:relative;
+      width:100%;
+      left:0;
+      margin-bottom:15px;
+    }
+    .retreats__inner-container{
+      padding:35px 25px;
+      .retreats__title{
+        margin-bottom:15px;
+      }
+    }
+  }
+  .student-life__arrow-container{
+    height:50px;
+    width:10%;
+    margin:0 auto;
+    position:relative;
+    @include bp(tablet){
+      width:12%;
+      margin-left:auto;
+      margin-right:35%;
+    }
+    @include bp(mobile){
+      width:25%;
+      margin:0 auto;
+    }
+    .slider-button{
+      border:2px solid $green;
+      &.prev{
+        left:0;
+      }
+      &.next{
+        right:0;
+      }
+      .slide-arrow{
+        border-color:$green;
+      }
+    }
+  }
+}

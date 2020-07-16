@@ -1,0 +1,79 @@
+//Secondary Page Form Styles
+.nf-form-cont{
+  width:100%;
+  .nf-form-title{
+    display:none; //form title is repeated. Hiding this
+  }
+  .form-section-title-container{
+    margin:10px 0 0;
+    .form-section-title{
+      font-family: 'brandon_textbold';
+      color:$medium-gray;
+      margin-bottom:15px;
+      &.title-top{
+        margin-bottom:25px;
+      }
+    }
+  }
+  .pc-form-field__container{
+    position:relative;
+    margin-bottom:35px;
+    .nf-field-label{
+      position:absolute;
+      top:8px;
+      left:0px;
+      z-index:100;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
+      label{
+        font-size:.8rem;
+        padding-left:8px;
+        transition:.2s;
+      }
+    }
+    .pc-form-field__element{ //input field for ninja form
+      appearance:none;
+      border:1px solid $medium-gray;
+      transition:.2s;
+      background-color:#f9f9f9;
+      &:focus{
+        box-shadow:0 0 2px #9C9EA0;
+      }
+      &.filled{
+        border:2px solid $green;
+      }
+    }
+    .focused{
+      .nf-field-label{
+        transform: translateY(-150%);
+        label{
+          font-size: .75rem;
+          padding:0;
+        }
+      }
+    }
+  //End Form label animations ------->
+    .nf-form-fields-required {
+      display:none;
+    }
+  }
+  .pc-form-textarea{
+    height:100px;
+    background-color:#f9f9f9;
+    &:focus{
+      box-shadow:0 0 2px #9C9EA0;
+    }
+    &.filled{
+      border:2px solid $green;
+    }
+  }
+  select{
+    padding:.45rem;
+  }
+}
+
+//Page specific form styling 
+.page-template-alumni-registration, .page-template-edit-alumni-profile{
+  .nf-form-cont{
+    width:80%;
+  }
+}

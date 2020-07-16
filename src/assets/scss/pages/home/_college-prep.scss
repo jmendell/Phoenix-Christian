@@ -1,0 +1,52 @@
+.college-prep{
+  padding-top:50px;
+  @include bp(mobile){
+    padding-top:0;
+  }
+  .prep-in-our-name{
+    text-align:center;
+    .prep__title{
+      margin-bottom:15px;
+      @include bp(mobile){
+        line-height:1.2;
+        text-align:center;
+        width:90%;
+        margin:0 auto 15px;
+      }
+    }
+    .prep__copy{
+      width:50%;
+      margin:0 auto;
+      @include bp(desktop){
+        width:45%;
+      }
+      @include bp(mobile){
+        width:80%;
+        font-size:1.2rem;
+      }
+    }
+  }
+  .college-logos{
+    padding:100px 0;
+    flex-wrap:wrap;
+    width:80%;
+    margin:0 auto;
+    align-items:center;
+    justify-content:space-between;
+    @include bp(mobile){
+      width:85%;
+    }
+    .college-logo{
+      width:150px;
+      flex-basis:15%;
+      margin:5px 15px;
+      @include bp(tablet){
+        flex-basis:25%;
+      }
+      @include bp(mobile){
+        flex-basis:40%;
+        margin:5px 0;
+      }
+    }
+  }
+}

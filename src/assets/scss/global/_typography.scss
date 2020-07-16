@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'brandon_textbold';
+    src: url('../fonts/hvd_fonts_-_brandontext-bold-webfont.woff2') format('woff2'),
+         url('../fonts/hvd_fonts_-_brandontext-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'brandon_textlight';
+    src: url('../fonts/hvd_fonts_-_brandontext-light-webfont.woff2') format('woff2'),
+         url('../fonts/hvd_fonts_-_brandontext-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'brandon_text_regularregular';
+    src: url('../fonts/hvd_fonts_-_brandontext-regular-webfont.woff2') format('woff2'),
+         url('../fonts/hvd_fonts_-_brandontext-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'brandon_textmedium';
+    src: url('../fonts/hvd_fonts_-_brandontext-medium-webfont.woff2') format('woff2'),
+         url('../fonts/hvd_fonts_-_brandontext-medium-webfont.woff') format('woff');
+}
+
+.bran-bold{
+  font-family: 'brandon_textbold';
+}
+
+.bran-lite{
+  font-family: 'brandon_textlight';
+}
+
+.bran-reg{
+  font-family: 'brandon_text_regularregular';
+}
+
+.bran-med{
+  font-family: 'brandon_textmedium';
+}
+
+.text-white{
+  color:$white;
+}
+
+.text-black{
+  color:$black;
+}
+
+.text-green{
+  color:$green;
+}
+
+.text-green-dark{
+  color:$green-dark;
+}
+
+.text-green-dark-light{
+  color:$green-dark-light;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.bold{
+  font-weight:500;
+}
+
+.uppercase{
+  text-transform:uppercase;
+}
+
+.capitalize{
+  text-transform:capitalize;
+}
+
+.hero-tagline-large{
+  font-size:2.8rem;
+  @include bp(mobile){
+    font-size:2.5rem; 
+  }
+}
+
+.section-title-text{
+  line-height:1.2;
+  margin-bottom:15px;
+  font-family: 'brandon_text_regularregular';
+  @include bp(tablet){
+    font-size:2.5rem;
+  }
+  @include bp(mobile){
+    font-size:2.2rem;
+  }
+}

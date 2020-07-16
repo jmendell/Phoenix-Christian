@@ -1,0 +1,53 @@
+.simple-process{
+  width:90%;
+  margin:0 auto;
+  padding:25px 0 75px;
+  .simple__copy-container{
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+    .simple__copy{
+      width:60%;
+      margin:0 auto;
+      text-align: center;
+      @include bp(tablet){
+        width:75%;
+      }
+    }
+  }
+  .simple-steps__container{
+    margin:75px 10px;
+    @include bp(mobile-large){
+      flex-direction:column;
+      margin:50px 10px;
+    }
+    .single-step__container{
+      justify-content:flex-start;
+      margin:0 15px;
+      @include bp(mobile-large){
+        margin:25px 0;
+      }
+      .step__copy{
+        text-align:center;
+      }
+      .step__number-container{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        border: 2px solid $green;
+        border-radius: 100px;
+        margin-bottom:25px;
+        .step__number{
+          font-size:1.5rem;
+        }
+      }
+    }
+  }
+  .btn-container{
+    width:100%;
+    text-align:center;
+    .apply-btn{
+      padding:15px 50px;
+    }
+  }
+}

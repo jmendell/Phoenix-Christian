@@ -1,0 +1,72 @@
+.hero{
+  height:700px;
+  background-size:cover;
+  position:relative;
+  @include bp(mobile){
+    height:500px;
+    background-position:center;
+  }
+  .hero__bg-image{
+    height:100%;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    position: absolute;
+    z-index: 0;
+  }
+  .video-container{
+    @include size(100%,100%);
+    position:absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    iframe{
+      width: 100vw;
+      height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+      min-height: 100%;
+      min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .hero-content-container{
+    @include position(absolute, 60%, null, null, 40%);
+    @include transform(-50%, -50%);
+    width:80%;
+    margin:0 auto;
+    position:relative;
+    @include bp(mobile){
+      width:90%;
+      margin:0 50px;
+    }
+    .hero-copy-container{
+      margin-bottom:25px;
+      .hero-tagline{
+        margin-bottom:10px;
+        @include bp(mobile){
+          font-size:3rem;
+        }
+      }
+      .hero-copy{
+        width:50%;
+        @include bp(tablet){
+          width:75%;
+        }
+        @include bp(mobile){
+          width:100%;
+        }
+      }
+    }
+    .hero-button-container{
+      .hero-btn{
+        margin:0 5px;
+        &:first-child{
+          margin-left:0;
+        }
+      }
+    }
+  }
+}

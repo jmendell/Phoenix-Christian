@@ -1,0 +1,222 @@
+footer{
+  .flex-col-sm{
+    flex-basis:23%;
+  }
+  .flex-col-lrg{
+    flex-basis:35%;
+  }
+  .flex-social{
+    flex-basis:17%;
+  }
+  .flex-30{
+    flex-basis:30%;
+  }
+  .flex-40{
+    flex-basis:40%;
+  }
+  .flex-60{
+    flex-basis:60%;
+  }
+  .footer-top{
+    background-color: $green-dark-light;
+    padding:50px 0;
+    @include bp(mobile){
+      padding:25px 0;
+    }
+  }
+}
+.footer-desktop{
+  @include bp(mobile){
+    display:none;
+  }
+  .footer-top__titles{
+    .footer__titles{
+      align-items:center;
+    }
+    .footer-title__title{
+      font-size:1.2rem;
+      letter-spacing:1px;
+    }
+    .footer-title__container--social{
+      .social-media-icons{
+        align-items:center;
+      }
+      .social-icon{
+        fill:$white;
+        width:25px;
+        height:100%;
+        transition:.4s;
+        @include bp(desktop){
+          &:hover{
+            fill:$green;
+          }
+        }
+        &.twitter-icon{
+          margin:0 25px;
+        }
+      }
+    }
+  }
+  .separator{
+    width:100%;
+    height:1px;
+    background-color: $green;
+    margin:10px 0;
+  }
+  .footer-top__links{
+    .footer-link{
+      margin:15px 0;
+      font-size:.95rem;
+      transition:.4s;
+      @include bp(desktop){
+        &:hover{
+          color:$green;
+        }
+      }
+    }
+    .footer-links__container--helpful{
+      flex-wrap:wrap;
+      .footer-link{
+        flex-basis:50%;
+        display:flex;
+        align-items:center;
+      }
+    }
+    .footer-links__container--logos{
+      .footer-logo{
+        margin:12px 0;
+      }
+      .acsi-logo{
+        margin-bottom:0;
+      }
+    }
+  }
+
+  .footer-bottom{
+    background-color: $green-dark;
+    padding:25px 0;
+    .footer-bottom__inner-container{
+      align-items:center;
+    }
+    .pc-logo-no-text{
+      width:100px;
+      height:100%;
+      margin-right:25px;
+    }
+    .footer-bottom__campuses{
+      @include bp(desktop){
+        flex-direction:column;
+      }
+      .campuses__locations{
+        @include bp(desktop){
+          display:flex;
+        }
+        .single__location{
+          margin:5px 0;
+          &:first-child{
+            @include bp(desktop){
+              margin-right:25px;
+            }
+          }
+          .campus{
+            font-size:.95rem;
+          }
+          .address{
+            font-size:.9rem;
+            margin:2px 0;
+          }
+          .single__phone-fax{
+            font-size:.95rem;
+            @include bp(desktop){
+              display: flex;
+            }
+            .fax{
+              margin-left:8px;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom__contact-info{
+      font-size:.95rem;
+      @include bp(desktop){
+        padding-left:25px;
+      }
+      .fax{
+        margin:5px 0;
+      }
+      .email, .phone{
+        transition:.4s;
+        @include bp(desktop){
+          &:hover{
+            color:$green;
+          }
+        }
+      }
+    }
+    .footer-bottom__updates{
+      .updates__tagline{
+        margin-bottom:5px;
+      }
+      //constant contact form styles
+      .ctct-form{
+        display:flex;
+      }
+      label, .ctct-button{
+        display:none;
+      }
+      .ctct-email{
+        padding: 12px 8px;
+        margin-bottom:0;
+        border-radius:5px 0 0 5px;
+        appearance:none;
+        border:none;
+        font-size:.9rem;
+        width:100%;
+        background-color: #AAB0A3;
+        color:$white;
+        @include bp(desktop){
+          min-width:200px;
+        }
+        &::placeholder{
+          color:$white;
+          font-family: 'brandon_text_regularregular';
+        }
+      }
+      input[type='submit']{
+        font-family: 'brandon_textbold';
+        border-radius:0 5px 5px 0;
+        padding:5px 15px;
+        font-size:.9rem;
+        background-color: $green-dark-light;
+        border:none;
+        color:$white;
+        transition:.4s;
+        height:100%;
+        @include bp(desktop){
+          &:hover{
+            background-color: $white;
+            color:$green-dark;
+            cursor:pointer;
+          }
+        }
+      }
+      .ctct-disclosure{
+        display:none;
+      }
+    }
+  }
+  .footer-copyright{
+    text-align:center;
+    padding:10px 0;
+    font-size:.9rem;
+    a{
+      transition:.3s;
+      @include bp(desktop){
+        &:hover{
+          color:$green;
+        }
+      }
+    }
+  }
+}

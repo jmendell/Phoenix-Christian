@@ -1,0 +1,12 @@
+.take-a-look-full{
+  height:500px;
+  background-size:cover;
+  background-position:center;
+  @include bp(tablet){
+    height:350px;
+  }
+  .play-btn{
+    margin-bottom:15px;
+    max-width:125px;
+  }
+}

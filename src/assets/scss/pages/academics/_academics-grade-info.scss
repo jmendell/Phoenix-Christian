@@ -1,0 +1,123 @@
+.academics__grade-info{
+  .grade-info__tabs{
+    border:none;
+    .academic-tab{
+      text-align:center;
+      transition:.3s;
+      &.elm-tab{
+        background-color: #ECECEC;
+      }
+      &.ms-tab{
+        background-color: #DEDEDE;
+      }
+      &.pre-tab{
+        background-color: #F8F8F8;
+      }
+      @include bp(desktop){
+        width:25%;
+      }
+      a{
+        font-size:1rem;
+        color:$medium-gray;
+        transition:.3s;
+        @include bp(desktop){
+          &:hover{
+            color:$green;
+          }
+        }
+      }
+      &.is-active{
+        a{
+          background-color: $green;
+          color:$white;
+        }
+      }
+    }
+  }
+  .academic-content-container{
+    padding:50px 25px;
+    @include bp(tablet){
+      padding:15px;
+    }
+  }
+  .tab__inner-container{
+    @include bp(tablet){
+      flex-direction:column;
+    }
+    .tab__content-container{ // Styles for both containers within a tab (slider and copy)
+      width:50%;
+      margin:0 10px;
+      @include bp(tablet){
+        width:100%;
+        margin:10px 0;
+      }
+    }
+    .tab__copy-content{
+      padding-top:25px;
+      .copy-content__title{
+        margin-bottom:15px;
+        @include bp(mobile){
+          font-size:2rem;
+        }
+      }
+      .copy-content__copy{
+        margin-bottom: 50px;
+      }
+    }
+    .tab__slider-content{
+      min-width:0;
+      min-height: 0;
+      .slide-image{
+        height:350px;
+        background-size:cover;
+        margin-right:15px;
+        position:relative;
+        @include bp(tablet){
+          margin-right:0;
+        }
+        @include bp(mobile){
+          height:225px;
+        }
+        .play-btn{
+          width:30%;
+          @include position(absolute, 50%, null, null, 50%);
+          @include transform(-50%, -50%);
+        }
+      }
+      .slick-list{
+        padding:0 10% 0 0;
+        @include bp(tablet){
+          padding:0;
+        }
+      }
+      .arrow-container{
+        height:50px;
+        position:relative;
+        .slider-button{
+          border:2px solid $green-dark;
+          &.prev{
+            left:0;
+          }
+          &.next{
+            right:0;
+            @include bp(desktop){
+              left:50px;
+            }
+            @include bp(tablet){
+              left:50px;
+            }
+          }
+          .slide-arrow{
+            border-color:$green-dark;
+          }
+        }
+      }
+      .slider-button{
+        @include bp(mobile){
+          border:2px solid $white;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
